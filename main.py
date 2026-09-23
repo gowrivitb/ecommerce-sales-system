@@ -1,1 +1,4 @@
-print('E-Commerce Sales Analytics System')
+print('===================================')
+print('E-Commerce Sales Management System')
+print('===================================')
+product=[]
