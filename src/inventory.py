@@ -70,10 +70,10 @@ def SearchInventory():
     i=InventoryExists(inventory,pid)
     if i is None:
         print('Inventory not found')
-    else:
-        for j,k in i.items():
-            if j!='product_id': 
-                print(j,'=',k)
+    
+    for j,k in i.items():
+        if j!='product_id': 
+            print(j,'=',k)
     
 def UpdateInventory():
 
@@ -82,7 +82,7 @@ def UpdateInventory():
     if p is None:
         print('Product not found')
         return
-    i=InventoryExists(inventor,pid)
+    i=InventoryExists(inventory,pid)
     if i is None:
         print('!!! Inventory Not Found!!!')
         return
