@@ -1,1 +1,3 @@
 customer_id,customer_name,email,phone,password,premium
+C001,Gowri,gowri123@gmail.com,3322114455,Gowri@123,No
+C002,Tejal,tejal123@gmail.com,9988776655,tejal@123,Yes

@@ -1,3 +1,5 @@
 product_id,product_type,product_name,brand,price
-E001,earpods,Airbeat 3 Pro,EGTech,1499
-E002,Headphones,Soundbeat 3,Xebronix,2999
+P001,Laptop,Acer AspireLite 14,Acer,69999
+P002,earpods,Airbeat 3 Pro,EGTech,1499
+P004,Headphones,Soundbeat 3,Xebronix,2999
+P005,Mouse,Protronics Mice 4,Protronics,2999

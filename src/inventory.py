@@ -1,6 +1,6 @@
 import csv
-from validation import ProductExists,InventoryExists
-from products import products
+from src.validation import ProductExists,InventoryExists
+from src.products import products
 inventory=[        ]
 with open('data/inventory.csv','r') as f:
     r=csv.DictReader(f)
@@ -45,16 +45,16 @@ def AddInventory():
 def ViewInventory():
     for i in inventory:
         p=ProductExists(i['product_id'])
-        if p is None:
-            print('!!! PRODUCT NOT FOUND!!!')
-            continue
+        if p is not None:
+            print('All Product Details')
+            for m,n in p.items():
+                print(m,'=',n)
+            for j,k in i.items():
+                if j!='product_id':
+                    print(j,'=',k)
+        
             
-        print('All Product Details')
-        for m,n in p.items():
-            print(m,'=',n)
-        for j,k in i.items():
-            if j!='product_id':
-                print(j,'=',k)
+        
 
 
 def SearchInventory():

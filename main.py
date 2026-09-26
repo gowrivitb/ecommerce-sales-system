@@ -1,11 +1,13 @@
-print('===================================')
+print('-----------------------------------')
 print('E-Commerce Sales Management System')
-print('===================================')
-from customer import *
-from employee import *
-from products import *
-from inventory import *
-from orders import *
+print('-----------------------------------')
+from src.customer import *
+from src.employee import *
+from src.products import *
+from src.inventory import *
+from src.orders import *
+from src.analytics import *
+from src.reports import *
 
 
 while True:
@@ -49,7 +51,7 @@ while True:
                             break
                         else:
                             print('INVALID OPTION')
-                            break
+                            
                 elif n==2:
                     while True:
                         print('1.Add Inventory')
@@ -73,7 +75,7 @@ while True:
                             break
                         else:
                             print('INVALID OPTION')
-                            break
+                            
                 elif n==3:
                     while True:
                         print('1.View Customers')
@@ -94,6 +96,52 @@ while True:
                             break
                 elif n==4:
                     while True:
+                        print('1. View All Orders')
+                        print('2.Search Orders')
+                        print('3.Cancel an Order')
+                        print('4.Exit')
+                        m= int(input('Enter your choice(1-4):'))
+                        if m==1:
+                            ViewOrders()
+                        elif m==2:
+                            SearchOrder()
+                        elif m==3:
+                            CancelOrderEmp()
+                        elif m==4:
+                            break
+                        else:
+                            print('INVALID OPTION')
+                elif n==5:
+                    while True:
+                        print('1.Total Orders')
+                        print('2.Total Sales')
+                        print('3.Best-Selling Product')
+                        print('4.Premium Customers')
+                        print('5.Low Stock Products')
+                        print('6.Back')
+                        m= int(input('Enter your choice(1-6):'))
+                        if m==1:
+                            print(TotalOrders())
+                        elif m==2:
+                            print(TotalSales())
+                        elif m==3:
+                            BSProd()
+                        elif m==4:
+                            print(PremCustomers())
+                        elif m==5:
+                            LSProd()
+                        elif m==6:
+                            break
+                        else:
+                            print('INVALID OPTION')
+
+                elif n==6:
+                    SalesReport()
+                elif n==7:
+                    break
+                else:
+                    print('INVALID OPTION')
+
 
 
     elif i==2:

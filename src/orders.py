@@ -1,8 +1,8 @@
 import csv
-from customer import customer
-from products import products
-from inventory import inventory
-from validation import ProductExists,InventoryExists
+from src.customer import customer
+from src.products import products
+from src.inventory import inventory
+from src.validation import ProductExists,InventoryExists
 orders=[]
 with open('data/orders.csv','r') as f:
     r=csv.DictReader(f)

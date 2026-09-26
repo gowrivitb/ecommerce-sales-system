@@ -19,7 +19,7 @@ def RegisterCustomer():
     c['customer_id']=GenerateCustomerID()
     c['customer_name']=input('Enter your name:')
     c['email']=input('Enter your email id')
-    c['phone']=int(input('Enter ur 10-digit phone number:'))
+    c['phone']=input('Enter ur 10-digit phone number:')
     c['password']=input('Enter your password')
     i=input('Confirm your password:')
     if c['password']!=i:
@@ -34,7 +34,11 @@ def RegisterCustomer():
 def LoginCustomer():
     e=input('Enter your email id or phone numer:')
     p=input('Enter your password:')
+    print('login input',repr(e))
+    
     for c in customer:
+        print('login email',repr(c['email']))
+        print('login phone',repr(c['phone']))
         if c['email']==e or c['phone']==e:
             if c['password']==p:
                 print('LOGGED IN')
